@@ -4,9 +4,6 @@
 vim.g.mapleader = " "
 -- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
 
--- Open file Explorer, but disabled for nvim tree plugin
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "Open wim File Explore" })
-
 -- Move selected lines down & up
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
