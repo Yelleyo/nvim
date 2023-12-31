@@ -4,6 +4,7 @@
 vim.g.mapleader = " "
 -- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
 
+
 -- Move selected lines down & up
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
