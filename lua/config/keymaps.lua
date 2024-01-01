@@ -47,9 +47,7 @@ vim.api.nvim_set_keymap("n", "<Leader>wh", "<C-w>h", { desc = "Window left", nor
 vim.api.nvim_set_keymap("n", "<Leader>wl", "<C-w>l", { desc = "Window right", noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>wj", "<C-w>j", { desc = "Window down", noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>wk", "<C-w>k", { desc = "Window up", noremap = true })
-
--- vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+vim.api.nvim_set_keymap("n", "<Leader>ws", "<C-w>v", { desc = "Split window vertically", noremap = true })
 
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
