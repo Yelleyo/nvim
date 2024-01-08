@@ -1,8 +1,8 @@
 return {
-    "windwp/nvim-autopairs",
+    'windwp/nvim-autopairs',
     event = "InsertEnter",
 
-    require("nvim-autopairs").setup {
+    opts = { -- this is equalent to setup({}) function
         map_char = {
             all = "(",
             tex = "{",
@@ -35,4 +35,3 @@ return {
         },
     }
 }
-

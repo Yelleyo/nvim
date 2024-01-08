@@ -4,7 +4,6 @@
 vim.g.mapleader = " "
 -- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
 
-
 -- Move selected lines down & up
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
@@ -35,14 +34,18 @@ vim.keymap.set("n", "x", '"_x', {desc = "Delete to the void"})
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
+-- Quickfix next/previous centered in the middle of the screen
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+
+-- Quicksearch: / next/prev centered in the middle of the screen
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- replace all instances of the word you are on!!
 vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all same" })
--- Moving between windows
+
+-- Moving between windows / honnestly Ctrl hjkl is also fine
 vim.api.nvim_set_keymap("n", "<Leader>wh", "<C-w>h", { desc = "Window left", noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>wl", "<C-w>l", { desc = "Window right", noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>wj", "<C-w>j", { desc = "Window down", noremap = true })

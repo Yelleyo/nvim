@@ -17,7 +17,8 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
   },
 
-  install = { colorscheme = { "tokyonight", "habamax" } },
+-- Why would we need this (commenting is out):
+  -- install = { colorscheme = { "tokyonight", "habamax" } },
 
   performance = {
     rtp = {
