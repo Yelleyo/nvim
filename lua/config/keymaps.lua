@@ -55,3 +55,6 @@ end)
 
 vim.keymap.set('n', '<leader>wu', vim.cmd.UndotreeToggle, {desc = "Toggle UndoTree", noremap = true })
 
+-- D0 things with the mouse and tab
+vim.keymap.set("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
+vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
