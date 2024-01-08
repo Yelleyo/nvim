@@ -20,7 +20,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- instead of repalcing the yanked text, by the one pasted over. It keeps it.
-vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "paste and keep in buffer" })
+-- repalcing this by yanky.lua funtionalities
+-- vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "paste and keep in buffer" })
 
 -- next greatest remap ever : asbjornHaland
 -- yanking/deleting to the system buffer -> windows
