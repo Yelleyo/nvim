@@ -20,15 +20,9 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
-        capabilites = capabilities,
-      })
-      lspconfig.html.setup({
-        capabilites = capabilities,
-      })
-      lspconfig.lua_ls.setup({
-        capabilites = capabilities,
-      })
+        lspconfig.html.setup  {}
+        lspconfig.lua_ls.setup {}
+        lspconfig.pyright.setup {}
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
