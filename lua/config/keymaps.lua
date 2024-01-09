@@ -31,12 +31,12 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- next greatest remap ever : asbjornHaland
 -- yanking/deleting to the system buffer -> windows
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to OS buffer" })
-vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to OS buffer" })
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete to OS buffer" })
-vim.keymap.set({ "n", "v" }, "<leader>p", [["*p]], { desc = "paste after _ from OS buffer" })
-vim.keymap.set("n", "<leader>P", [["*P]], { desc = "paste before _ from OS buffer" })
-vim.keymap.set("n", "x", '"_x', {desc = "Delete to the void"})
+-- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to OS buffer" }) -- not needed, happening anyway
+-- vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to OS buffer" })
+-- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete to OS buffer" })
+-- vim.keymap.set({ "n", "v" }, "<leader>p", [["*p]], { desc = "paste after _ from OS buffer" })
+-- vim.keymap.set("n", "<leader>P", [["*P]], { desc = "paste before _ from OS buffer" })
+vim.keymap.set("n", "x", '"_x', {desc = "Delete to the void", noremap = true})
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
