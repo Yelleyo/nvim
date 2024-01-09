@@ -12,6 +12,9 @@ vim.opt.termguicolors = true -- Enables true color support
 vim.opt.clipboard = "unnamedplus" -- Allows use of the system clipboard
 vim.opt.splitright = true -- Splits new windows to the right
 
+vim.cmd[[highlight LineNr guifg=#4C566A]] -- Color of the wind, and the line numbering
+vim.cmd[[highlight CursorLineNr guifg=#97B67C]] -- Color of the current line - taken from the nordic theme: https://www.nordtheme.com/
+
 vim.g.autoformat = false -- Disables autoformat
 vim.opt.nu = true -- Enables line numbers
 vim.opt.relativenumber = true -- Shows line numbers relative to the cursor
