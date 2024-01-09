@@ -4,11 +4,15 @@
 vim.g.mapleader = " "
 -- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
 
+-- bind for :q and :w
+vim.api.nvim_set_keymap('n', '<leader>wq', ':q<CR>', {desc = "Quit", noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>ww', ':w<CR>', {desc = "Write", noremap = true, silent = true})
+ 
 -- Move selected lines down & up
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
 
--- Append line below to current line, and charet stays in place
+-- Append line below to current line, and charet stays n place
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- Moves half screen down/up and keep cursor in the middle
