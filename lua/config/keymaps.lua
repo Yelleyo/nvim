@@ -2,7 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps hereby
 vim.g.mapleader = " "
--- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
+vim.g.maplocalleader = ' '
 
 -- bind for :q, :w and :s
 vim.api.nvim_set_keymap('n', '<leader>wq', ':q<CR>', {desc = "Quit", noremap = true, silent = true})
@@ -25,25 +25,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- instead of repalcing the yanked text, by the one pasted over. It keeps it.
--- repalcing this by yanky.lua funtionalities
--- vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "paste and keep in buffer" })
-
--- next greatest remap ever : asbjornHaland
--- yanking/deleting to the system buffer -> windows
--- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to OS buffer" }) -- not needed, happening anyway
--- vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to OS buffer" })
--- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "delete to OS buffer" })
--- vim.keymap.set({ "n", "v" }, "<leader>p", [["*p]], { desc = "paste after _ from OS buffer" })
--- vim.keymap.set("n", "<leader>P", [["*P]], { desc = "paste before _ from OS buffer" })
 vim.keymap.set("n", "x", '"_x', {desc = "Delete to the void", noremap = true})
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
-
--- Quickfix next/previous centered in the middle of the screen
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 
 -- Quicksearch: / next/prev centered in the middle of the screen
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
@@ -68,3 +53,6 @@ vim.keymap.set('n', '<leader>wu', vim.cmd.UndotreeToggle, {desc = "Toggle UndoTr
 -- D0 things with the mouse and tab
 vim.keymap.set("n", "<RightMouse>", "<cmd>:popup mousemenu<CR>")
 vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
+
+-- Vertical split
+vim.keymap.set('n', '<Leader>v', vim.cmd.vsplit, { silent = true })
