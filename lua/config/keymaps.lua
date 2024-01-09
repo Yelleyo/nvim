@@ -4,10 +4,12 @@
 vim.g.mapleader = " "
 -- vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>")
 
--- bind for :q and :w
+-- bind for :q, :w and :s
 vim.api.nvim_set_keymap('n', '<leader>wq', ':q<CR>', {desc = "Quit", noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>ww', ':w<CR>', {desc = "Write", noremap = true, silent = true})
- 
+vim.api.nvim_set_keymap('n', '<leader>wo', ':so<CR>', {desc = "Source out", noremap = true, silent = true})
+
+
 -- Move selected lines down & up
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
