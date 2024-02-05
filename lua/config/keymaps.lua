@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ' '
 
 -- bind for :q, :w and :s
-vim.api.nvim_set_keymap('n', '<leader>wq', ':q<CR>', {desc = "Quit", noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>qq', ':q<CR>', {desc = "Quit", noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>ww', ':w<CR>', {desc = "Write", noremap = true, silent = true})
 vim.api.nvim_set_keymap('n', '<leader>wo', ':so<CR>', {desc = "Source out", noremap = true, silent = true})
 
