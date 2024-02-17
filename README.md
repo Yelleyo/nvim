@@ -2,7 +2,7 @@
 
 Windows:
 ```sh
-git clone https://github.com/Yelleyo/nvim C:\Users\YelleT\AppData\Local\nvim
+git clone https://github.com/Yelleyo/nvim %USERPROFILE%\AppData\Local\nvim
 ```
 
 Linux
