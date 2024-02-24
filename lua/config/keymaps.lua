@@ -43,10 +43,6 @@ vim.api.nvim_set_keymap("n", "<Leader>wj", "<C-w>j", { desc = "Window down", nor
 vim.api.nvim_set_keymap("n", "<Leader>wk", "<C-w>k", { desc = "Window up", noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>ws", "<C-w>v", { desc = "Split window vertically", noremap = true })
 
-vim.keymap.set("n", "<leader><leader>", function()
-  vim.cmd("so")
-end)
-
 vim.keymap.set('n', '<leader>wu', vim.cmd.UndotreeToggle, {desc = "Toggle UndoTree", noremap = true })
 
 -- D0 things with the mouse and tab
@@ -55,3 +51,10 @@ vim.keymap.set("n", "<Tab>", "<cmd>:popup mousemenu<CR>")
 
 -- Vertical split
 vim.keymap.set('n', '<Leader>v', vim.cmd.vsplit, { silent = true })
+
+-- Keymaps for Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "[F]ind [F]iles", noremap = true})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {desc = "[F]ind [G]rep", noremap = true})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "[F]ind [B]uffers", noremap = true})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "[F]ind [F]iles", noremap = true})

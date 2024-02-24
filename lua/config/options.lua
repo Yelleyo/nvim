@@ -5,15 +5,24 @@
 vim.g.loaded_netrw = 1 -- Disables the netrw file explorer
 vim.g.loaded_netrwPlugin = 1 -- Disables the netrwPlugin
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" }) -- Sets the background color for normal text to none
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }) -- Sets the background color for floating text to none
+-- Config the Default shell for the terminal:
+vim.opt.shell = vim.fn.executable "pwsh" and "pwsh" or "powershell"
+vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;"
+vim.opt.shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait"
+vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
+vim.opt.shellquote = ""
+vim.opt.shellxquote = ""
+
 vim.opt.termguicolors = true -- Enables true color support
 
 vim.opt.clipboard = "unnamedplus" -- Allows use of the system clipboard
 vim.opt.splitright = true -- Splits new windows to the right
 
-vim.cmd[[highlight LineNr guifg=#4C566A]] -- Color of the wind, and the line numbering
-vim.cmd[[highlight CursorLineNr guifg=#97B67C]] -- Color of the current line - taken from the nordic theme: https://www.nordtheme.com/
+-- line Number color in a delayed funtion
+vim.defer_fn(function()
+    vim.cmd[[highlight LineNr guifg=#4C566A]]
+    vim.cmd[[highlight CursorLineNr guifg=#97B67C]]
+end, 0)
 
 vim.g.autoformat = false -- Disables autoformat
 vim.opt.nu = true -- Enables line numbers
