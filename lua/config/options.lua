@@ -2,8 +2,8 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
 -- Add any additional options hereby
-vim.g.loaded_netrw = 1 -- Disables the netrw file explorer
-vim.g.loaded_netrwPlugin = 1 -- Disables the netrwPlugin
+-- vim.g.loaded_netrw = 1 -- Disables the netrw file explorer
+-- vim.g.loaded_netrwPlugin = 1 -- Disables the netrwPlugin
 
 -- Config the Default shell for the terminal:
 vim.opt.shell = vim.fn.executable "pwsh" and "pwsh" or "powershell"
