@@ -43,6 +43,10 @@ vim.api.nvim_set_keymap("n", "<Leader>wj", "<C-w>j", { desc = "Window down", nor
 vim.api.nvim_set_keymap("n", "<Leader>wk", "<C-w>k", { desc = "Window up", noremap = true })
 vim.api.nvim_set_keymap("n", "<Leader>ws", "<C-w>v", { desc = "Split window vertically", noremap = true })
 
+-- jump to the last changed spot
+vim.keymap.set("n", "gl", "`.zz", { desc = "Jump to the last change in the file"})
+vim.keymap.set("n", "<leader>i", "`^zz", { desc = "Jump to the last insert location but in normal mode"})
+
 vim.keymap.set('n', '<leader>wu', vim.cmd.UndotreeToggle, {desc = "Toggle UndoTree", noremap = true })
 
 -- D0 things with the mouse and tab
