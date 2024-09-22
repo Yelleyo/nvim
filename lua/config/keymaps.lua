@@ -29,10 +29,6 @@ vim.keymap.set("n", "x", '"_x', {desc = "Delete to the void", noremap = true})
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "Q", "<nop>")
 
--- Quicksearch: / next/prev centered in the middle of the screen
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
-
 -- replace all instances of the word you are on!!
 vim.keymap.set("n", "<leader>o", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all same" })
 
